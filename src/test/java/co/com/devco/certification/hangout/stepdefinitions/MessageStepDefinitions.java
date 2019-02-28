@@ -3,7 +3,7 @@ package co.com.devco.certification.hangout.stepdefinitions;
 import static co.com.devco.certification.hangout.exceptions.ContactNoExistExceptions.CONTACT_NO_EXIST;
 import static co.com.devco.certification.hangout.tasks.OpenBrowser.openningBrowser;
 import static co.com.devco.certification.hangout.util.constant.ConstantManager.CHROME;
-import static co.com.devco.certification.hangout.util.constant.ConstantManager.SVE;
+import static co.com.devco.certification.hangout.util.constant.ConstantManager.USER;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -36,7 +36,7 @@ public class MessageStepDefinitions {
 
 	@Given("^I am navigate to the login page$")
 	public void iAmNavigateToTheLoginPage() throws Exception {
-		theActorCalled(SVE).can(BrowseTheWeb.with(hisBrowser));
+		theActorCalled(USER).can(BrowseTheWeb.with(hisBrowser));
 		theActorInTheSpotlight().wasAbleTo(openningBrowser());
 		theActorInTheSpotlight().attemptsTo(GoTo.login());
 	}
